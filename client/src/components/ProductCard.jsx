@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
 
   const handleBuyNow = () => {
     addToCart(product);
-    // Redirect to cart or checkout if needed
+    
   };
 
   return (
