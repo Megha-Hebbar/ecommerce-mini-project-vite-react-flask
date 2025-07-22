@@ -3,11 +3,11 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // ✅ useCart hook
+import { useCart } from "../context/CartContext";
 import "./Home.css";
 
 const Home = () => {
-  const { cartItems } = useCart(); // ✅ get live cartItems
+  const { cartItems } = useCart(); 
   const [showReminder, setShowReminder] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
     } else {
       setShowReminder(false);
     }
-  }, [cartItems]); // ✅ watch for changes in cartItems
+  }, [cartItems]); 
 
   return (
     <div className="home-page">
