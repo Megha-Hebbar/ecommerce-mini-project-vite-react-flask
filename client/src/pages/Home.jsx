@@ -5,12 +5,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "./Home.css";
-
 const Home = () => {
   const { cartItems } = useCart(); 
   const [showReminder, setShowReminder] = useState(false);
-
-  useEffect(() => {
+ useEffect(() => {
     if (cartItems.length > 0) {
       setShowReminder(true);
     } else {
