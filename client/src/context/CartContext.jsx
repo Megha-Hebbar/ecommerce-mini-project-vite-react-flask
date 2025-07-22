@@ -43,10 +43,7 @@ export const CartProvider = ({ children }) => {
     setIsLoggedIn(true);
   };
 
-  const logout = () => {
-    setIsLoggedIn(false);
-    clearCart(); // Optional: clear cart on logout
-  };
+ 
 
   return (
     <CartContext.Provider
@@ -57,7 +54,6 @@ export const CartProvider = ({ children }) => {
         clearCart,
         isLoggedIn,
         login,
-        logout,
       }}
     >
       {children}
