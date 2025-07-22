@@ -16,9 +16,9 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      console.log("Sending:", userData); // 👈 log request
+      console.log("Sending:", userData); 
       const res = await axios.post("http://127.0.0.1:5000/login", userData);
-      console.log("Response:", res.data); // 👈 log response
+      console.log("Response:", res.data); 
 
       if (res.data.success) {
         setMessage("✅ Login successful!");
@@ -54,7 +54,7 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
 
-      {/* ✅ Link to register */}
+      
       <p>
         Don't have an account? <a href="/register">Register here</a>
       </p>
